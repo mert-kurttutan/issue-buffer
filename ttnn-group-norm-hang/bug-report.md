@@ -50,6 +50,29 @@ The program executes successfully up to and including the `ttnn.group_norm` call
 
 ## Steps to Reproduce
 
+### Installation Steps
+
+1. Clone the tt-metal repository:
+```bash
+git clone https://github.com/tenstorrent/tt-metal.git
+cd tt-metal
+git checkout 8fc61371702e3e653a758e1616a6c3af5637d55b
+```
+
+2. Build from source:
+```bash
+./build_metal.sh
+```
+
+3. Set up Python environment and install dependencies:
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install torch
+```
+
+### Reproduction Code
+
 ```python
 import ttnn
 import torch
