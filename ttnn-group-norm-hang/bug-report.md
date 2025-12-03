@@ -9,7 +9,7 @@
 - **Framework**: TTNN (TensorTorrent Neural Network library)
 - **Build Method**: Built from source using `./build_metal.sh`
 - **Git Commit**: `8fc61371702e3e653a758e1616a6c3af5637d55b`
-- **tt-smi Version**: 3.0.12
+- **tt-smi Version**: 3.0.38
 - **pyluwen Version**: 0.7.1
 - **Python Version**: 3.8.10
 - **Data Type**: BFLOAT16
