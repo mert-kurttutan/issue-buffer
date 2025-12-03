@@ -145,26 +145,6 @@ print(f"y_ttnn shape: {y_ttnn.shape}")
 - No timeout occurs
 - Process must be manually killed (Ctrl+C or SIGTERM)
 
-## Configuration Details
-
-### Input Parameters
-- **Batch size (N)**: 1
-- **Channels (C)**: 64
-- **Height (H)**: 16
-- **Width (W)**: 16
-- **Number of groups (N_G)**: 8
-- **Input tensor shape (TTNN)**: `[1, 1, 256, 64]` (after reshape from NHWC)
-- **Core grid**: `(x=1, y=1)` - minimal configuration
-- **Inplace**: `False`
-
-### Tensor Shapes
-```
-x_ttnn shape: [1, 1, 256, 64]  # [N, 1, H*W, C]
-w_ttnn shape: [variable]        # After create_group_norm_weight_bias_rm
-b_ttnn shape: [variable]        # After create_group_norm_weight_bias_rm
-y_torch shape: [1, 64, 16, 16]  # PyTorch reference output
-```
-
 ## Additional Notes
 
 1. **Input mask tensor**: The code creates `input_mask_tensor` using `ttnn.create_group_norm_input_mask` but doesn't pass it to `ttnn.group_norm`. The API signature and documentation should clarify if this parameter is required or optional.
