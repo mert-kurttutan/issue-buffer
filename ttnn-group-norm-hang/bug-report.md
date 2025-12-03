@@ -184,16 +184,3 @@ print(f"y_ttnn shape: {y_ttnn.shape}")
 
 ## Workarounds Attempted
 None successful - synchronization is mandatory to retrieve results from device.
-
-## Reproduction Rate
-- **Frequency**: 100% reproducible with the provided code and parameters on this hardware configuration
-
-## Suggested Debug Steps
-
-1. Enable TTNN verbose logging or trace mode if available
-2. Check device command queue status before and after `group_norm` call
-3. Verify if other operations successfully synchronize on this device
-4. Test with different tensor sizes, group counts, and core grid configurations
-5. Test with explicit memory configuration (sharded vs. interleaved)
-6. Test passing `input_mask_tensor` to `group_norm` if parameter exists
-7. Check for firmware compatibility matrix for this tt-metal version
