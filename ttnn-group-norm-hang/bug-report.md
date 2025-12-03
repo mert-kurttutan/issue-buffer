@@ -6,7 +6,7 @@
 ## Environment
 
 ### Software Environment
-- **Framework**: TTNN (TensorTorrent Neural Network library)
+- **Framework**: TTNN (Tenstorrent Neural Network library)
 - **Build Method**: Built from source using `./build_metal.sh`
 - **Git Commit**: `8fc61371702e3e653a758e1616a6c3af5637d55b`
 - **tt-smi Version**: 3.0.38
